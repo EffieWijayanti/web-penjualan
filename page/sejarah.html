@@ -1,0 +1,23 @@
+<?php
+include('admins/pages/koneksi.php');
+?>
+<html>
+<head>
+	<title>Data sejarah</title>
+</head>
+<body bgcolor="#CCCCCC">
+<?php
+$sql	= 'select * from tbl_sejarah';
+$query	= mysqli_query($koneksi,$sql);
+while($data = mysqli_fetch_array($query)){
+?>
+<center>
+<h2><p><?php echo $data['judul'];?></p></h2>
+<img src="http://localhost/kuliahweb2023/utsweb2023/gambar/toko5.jpg">
+</center>
+<p><?php echo $data['isi']; ?></p>
+<?php
+}
+?>
+</body>	
+</html>
